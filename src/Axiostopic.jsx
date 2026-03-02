@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useState,useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 const apiUrl="http://13.235.76.33:3000/product/all-products"
 const imgUrl="http://13.235.76.33:3000"
@@ -28,12 +29,14 @@ const Axiostopic = () => {
     <div className='product'>
         {appl.map((satya)=>{
             return(
+                <Link to={`/single/${satya._id}`}>
                 <div className='user' key={satya._id}>
                     <img src={`${imgUrl}${satya.image}`} alt="" />
                     <h1>{satya.name}</h1>
                     <p>{satya.price}</p>
                     <hr/>
                 </div>
+                </Link>
             )
         })}
     </div>

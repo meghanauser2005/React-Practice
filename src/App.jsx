@@ -4,7 +4,9 @@ import Axiostopic from "./Axiostopic"
 import Form from "./Form"
 import Fun from "./Fun"
 import Props from "./Props"
+import Single from "./Single"
 import States from "./States"
+import { Routes, Route } from 'react-router-dom'
 
 function App(){
   return(
@@ -14,7 +16,11 @@ function App(){
       <Form/>
       <Fun/> */}
       {/* <ApiCalling/> */}
-      <Axiostopic/>
+      
+      <Routes>
+        <Route path="/" element={<Axiostopic/>} />
+        <Route path="/single/:id" element={<Single/>} />
+      </Routes>
     </div>
       
   )
