@@ -32,10 +32,10 @@ const Axiostopic = () => {
                 <Link to={`/single/${satya._id}`}>
                 <div className='user' key={satya._id}>
                     <img src={`${imgUrl}${satya.image}`} alt="" />
-                    <h1>{satya.name}</h1>
-                    <p>{satya.price}</p>
+                    <h1 className='text-4xl bg-amber-300 ml-1.5 begumpet'>{satya.name}</h1>
+                    <p className='text-blue-600'>{satya.price}</p>
                     <hr/>
-                </div>
+                </div> 
                 </Link>
             )
         })}
